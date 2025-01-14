@@ -23,7 +23,7 @@ driver = webdriver.Edge(service=service)
 try:
     # Step 2: Open the web application
     driver.get("https://practice-automation.com/")  
-   # driver.get("https://debanjanab.github.io/")
+   
     driver.maximize_window()
     print("Website opened successfully!")
 
@@ -31,9 +31,7 @@ try:
 
     # Step 3: Perform actions
     # Example: Locate a button and click
-   # button = driver.find_element(By.XPATH, "//a[contains(text(), 'Products')]")
-   # button = driver.find_element(By.CSS_SELECTOR, ".wp-block-button__link wp-element-button")
-    #button.click()
+   
     button = wait.until(
         EC.element_to_be_clickable((By.LINK_TEXT, "JavaScript Delays"))  # Use visible text
     )
@@ -42,13 +40,24 @@ try:
     button.click()
     print("Clicked 'JavaScript Delays' button.")
 
-    # Example: Locate a search bar and perform a search
-    search_bar = driver.find_element(By.CSS_SELECTOR, ".card-footer-item")  
-    search_bar.send_keys("Electric bikes" + Keys.RETURN)
-    print("Performed a search for 'Electric bikes'.")
+    time.sleep(3)
 
-    # Step 4: Pause for demonstration purposes
-   
+    #Go back to the home page
+    driver.back()
+
+    time.sleep(2)    
+    
+    # Step 6: Scroll down to another button
+    next_button = WebDriverWait(driver, 10).until(
+        EC.presence_of_element_located((By.LINK_TEXT, "Click Events"))  # Adjust the locator
+    )
+    driver.execute_script("arguments[0].scrollIntoView(true);", next_button)
+    time.sleep(2) 
+
+    # Step 7: Click the next button
+    next_button.click()
+    print("Clicked the second button!")
+
 
 finally:
     # Step 5: Close the browser
