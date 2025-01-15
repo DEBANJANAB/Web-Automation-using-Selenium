@@ -8,4 +8,4 @@
 2. To run the test script "selenium_test_script.py",
 
      
-   Go to command prompt and enter "python3 selenium_test_script.py"
+   ![image](https://github.com/user-attachments/assets/d4542864-31ac-4796-a7bc-723c75771384)
