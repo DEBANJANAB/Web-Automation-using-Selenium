@@ -1,0 +1,29 @@
+{
+  "url": "https://practice-automation.com/",
+  "actions": [
+    {
+      "action": "click",
+      "locator": {
+        "type": "LINK_TEXT",
+        "value": "JavaScript Delays"
+      },
+      "wait_time": 10
+    },
+    {
+      "action": "back",
+      "wait_time": 2
+    },
+    {
+      "action": "scroll_and_click",
+      "locator": {
+        "type": "LINK_TEXT",
+        "value": "Click Events"
+      },
+      "wait_time": 4
+    },
+{
+      "action": "back",
+      "wait_time": 2
+    }
+  ]
+}
