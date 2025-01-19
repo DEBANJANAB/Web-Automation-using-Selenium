@@ -1,0 +1,9 @@
+{
+    "url": "https://www.saucedemo.com/",
+    "username": "standard_user",
+    "password": "secret_sauce",
+    "driver_path": "C:/Users/parit/Downloads/edgedriver_win64 (1)/msedgedriver.exe",
+    "browser": "edge",
+    "tag_name": "button",
+    "attribute": "class"
+}
